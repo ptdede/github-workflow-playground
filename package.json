@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint . --ext .ts",
-    "generate:kpu": "ts-node ./scripts/generateReadme.ts"
+    "generate:kpu": "ts-node ./scripts/generateReadme.ts",
+    "generate:quote": "ts-node ./scripts/generateQuotes.ts"
   },
   "author": "",
   "license": "ISC",
