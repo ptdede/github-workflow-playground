@@ -33,12 +33,10 @@ jobs:
         run: npm i
 
       - name: Run Lint
-        run: |
-          npm run lint
+        run: npm run lint
 
       - name: Run Build
-        run: |
-          npm run build
+        run: npm run build
 
   bundlecheck:
     runs-on: ubuntu-latest
@@ -53,5 +51,5 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           strict: true
-          threshold: 500
+          threshold: 100
           ignore-dev-dependencies: true
