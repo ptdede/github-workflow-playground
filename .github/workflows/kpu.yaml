@@ -1,0 +1,30 @@
+on: workflow_dispatch
+jobs:
+  fetch-kpu:
+    name: Generate KPU pilpres 2024
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+
+      - name: Set up NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm i
+      
+      - name: Generate Readme
+        run: |
+          npm run generate:kpu
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: "[BOT] Dede Adhyatika"
+          author_email: putu.dede@gmail.com
+          message: 'chore(KPU): gather new pilpres data'
+          add: 'README.md'
