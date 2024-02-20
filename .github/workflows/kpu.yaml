@@ -18,11 +18,6 @@ jobs:
       - name: Install dependencies
         run: npm i
 
-  generate-data:
-    name: Generate data pilpres
-    runs-on: ubuntu-latest
-    needs: [setup-server]
-    steps:
       - name: Generate Readme
         run: |
           npm run generate:kpu
