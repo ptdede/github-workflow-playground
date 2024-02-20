@@ -11,7 +11,6 @@ const runApp = () => {
     },
   };
   const value = lodash.get(nestedObj, "depth1.depth2.value");
-
   return value;
 };
 
