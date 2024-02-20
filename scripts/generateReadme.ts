@@ -3,6 +3,7 @@ import Mustache from "mustache";
 import { format, parse } from "date-fns";
 import { id } from "date-fns/locale";
 import axios, { AxiosResponse } from "axios";
+import { formatInTimeZone } from "date-fns-tz";
 
 interface KPUResponse {
   ts: string;
@@ -15,9 +16,9 @@ interface KPUResponse {
 }
 
 const candidates = {
-  1: "100025",
-  2: "100026",
-  3: "100027",
+  1: "100025", // anies - muhaimin
+  2: "100026", // prabowo - gibran
+  3: "100027", // ganjar - mahfud
 };
 
 const generateReadme = async () => {
@@ -34,16 +35,27 @@ const generateReadme = async () => {
 
   // result is 2024-02-20 23:00:15
   const kpuDate = parse(kpuData.ts, "yyyy-MM-dd HH:mm:ss", new Date());
+  const kpuUpdatedAt = format(kpuDate, "dd MMMM yyyy HH:mm:ss", { locale: id });
+
+  // Make sure we use Jakarta timezone,
+  // Not Github action server timezone.
+  const updatedAt = formatInTimeZone(
+    new Date(),
+    "Asia/Jakarta",
+    "dd MMMM yyyy HH:mm:ss",
+    { locale: id }
+  );
 
   const result = Mustache.render(template, {
+    updatedAt,
+    kpuUpdatedAt,
     percentage: kpuData.chart.persen,
-    kpuUpdatedAt: format(kpuDate, "dd MMMM yyyy HH:mm:ss", { locale: id }),
-    updatedAt: format(new Date(), "dd MMMM yyyy HH:mm:ss", { locale: id }),
     candidate1: kpuData.chart[candidates[1]],
     candidate2: kpuData.chart[candidates[2]],
     candidate3: kpuData.chart[candidates[3]],
   });
 
+  // remove readme content, then update with the new one
   await writeFile("README.md", "");
   await writeFile("README.md", result);
 };
