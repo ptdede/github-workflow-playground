@@ -46,10 +46,24 @@ jobs:
         with:
           fetch-depth: 1
 
-      # https://github.com/marketplace/actions/bundlephobia-checker
-      - uses: carlesnunez/check-my-bundlephobia@v1.8.0
+      - name: Set up NodeJS
+        uses: actions/setup-node@v3
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          strict: true
-          threshold: 100
-          ignore-dev-dependencies: true
+          node-version: 20
+          cache: "npm"
+
+      # https://github.com/marketplace/actions/pkg-size-action
+      - name: Package size report
+        uses: pkg-size/action@v1.1.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          hide-files: "*.{js,css}.map"
+
+      # https://github.com/marketplace/actions/bundlephobia-checker
+      # - uses: carlesnunez/check-my-bundlephobia@v1.8.0
+      #   with:
+      #     repo-token: ${{ secrets.GITHUB_TOKEN }}
+      #     strict: true
+      #     threshold: 100
+      #     ignore-dev-dependencies: true
