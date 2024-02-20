@@ -38,4 +38,4 @@ jobs:
         with:
           author_name: "[BOT] Dede Adhyatika"
           author_email: putu.dede@gmail.com
-          message: "chore(KPU): gather new pilpres data"
+          message: "chore(Quote): New quote generated"
