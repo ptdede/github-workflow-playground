@@ -1,3 +1,4 @@
+name: Generate quote by schedule
 on:
   schedule:
     - cron: "0 5 * * 4" # At 05:00 on Thursday. (utc)

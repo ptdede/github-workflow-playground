@@ -1,5 +1,6 @@
 name: Validate Pull Request
 on: pull_request
+
 jobs:
   lint-code:
     name: Lint Code - ESLint

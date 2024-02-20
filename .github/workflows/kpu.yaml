@@ -1,5 +1,6 @@
 name: Generate KPU pilpres 2024
 on: workflow_dispatch
+
 jobs:
   setup-server:
     name: Setup action server
