@@ -33,7 +33,7 @@ const generateRandomQuotes = async () => {
     { locale: id }
   );
 
-  // remove readme content, then update with the new one
+  // append to end of quotes.md file
   await appendFile(
     "QUOTES.md",
     `[${updatedAt}]: ${quote.content} | by: ${quote.author}\n`
