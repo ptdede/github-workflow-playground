@@ -2,7 +2,7 @@ import lodash from "lodash";
 
 const runApp = () => {
   // Uncomment this will make eslint error.
-  // console.log("This will error on PR check");
+  console.log("This will error on PR check");
   const nestedObj = {
     depth1: {
       depth2: {
