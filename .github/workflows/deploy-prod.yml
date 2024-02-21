@@ -1,0 +1,71 @@
+name: Deploy Production
+on:
+  workflow_dispatch:
+  # push:
+  #   tags:
+  #     - '*'
+
+jobs:
+  setup-deply-project:
+    name: Setup and deploy project to Digital Ocean
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+
+      - name: Set up NodeJS
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Cache node modules
+        id: cache-npm
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules
+        with:
+          # npm cache files are stored in `~/.npm` on Linux/macOS
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Setup env variables
+        env:
+          GH_SECRETS: ${{ toJson(secrets) }}
+          DASHBOARD_GH_VARIABLES: ${{ toJson(vars) }}
+        run: |
+          # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#setting-an-environment-variable
+          # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
+
+          to_admin_envs() { jq -r "to_entries[] | select(.key|test(\"^ADMIN_APP_\")) | \"\(.key)=\(.value)\""; }
+          to_dashboard_envs() { jq -r "to_entries[] | select(.key|test(\"^VITE_\")) | \"\(.key)=\(.value)\""; }
+
+          echo "$GH_SECRETS" | to_admin_envs >> ./apps/admin/.env
+          cat ./apps/admin/.env
+
+          echo "============================================"
+
+          echo "$GH_SECRETS" | to_dashboard_envs >> ./apps/dashboard/.env
+          echo "$DASHBOARD_GH_VARIABLES" | to_dashboard_envs >> ./apps/dashboard/.env
+          cat ./apps/dashboard/.env
+      - name: Build
+        run: npm run build
+
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_KEY }}
+          known_hosts: "unnecessary"
+
+      - name: Adding Known Hosts
+        run: ssh-keyscan -H ${{ secrets.DO_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Deploy with rsync
+        run: rsync -avz --delete . ${{ secrets.DO_USER }}@${{ secrets.DO_HOST }}:/var/www/deployment
