@@ -1,7 +1,7 @@
 name: Generate quote by schedule
 on:
   schedule:
-    - cron: "0 5 * * 4" # At 05:00 on Thursday. (utc)
+    - cron: "0 4 * * 3" # At 04:00 on Thursday. (utc)
 
 jobs:
   try_schedule:
