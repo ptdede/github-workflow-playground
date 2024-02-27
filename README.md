@@ -1,9 +1,9 @@
-### Pemilihan Umum 2024 (74.4% progress)
-#### diambil pada: 22 Februari 2024 08:32:51 | KPU update pada: 22 Februari 2024 08:00:15
+### Pemilihan Umum 2024 (77.42% progress)
+#### diambil pada: 27 Februari 2024 10:01:44 | KPU update pada: 27 Februari 2024 09:00:15
 
 ```mermaid
 pie title Persentase Perolehan Real Count KPU
-    "ANIES - MUHAIMIN" : 25974742
-    "PRABOWO - GIBRAN" : 63480726
-    "GANJAR - MAHFUD MD" : 18355601
+    "ANIES - MUHAIMIN" : 31183429
+    "PRABOWO - GIBRAN" : 75019083
+    "GANJAR - MAHFUD MD" : 21291450
 ```
