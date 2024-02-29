@@ -1,5 +1,5 @@
 ### Pemilihan Umum 2024 (77.82% progress)
-#### diambil pada: 29 Februari 2024 13:58:23 | KPU update pada: 29 Februari 2024 13:00:15
+#### diambil pada: 29 Februari 2024 13:59:48 | KPU update pada: 29 Februari 2024 13:00:15
 
 ```mermaid
 pie title Persentase Perolehan Real Count KPU
