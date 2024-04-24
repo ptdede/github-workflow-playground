@@ -7,3 +7,4 @@
 [03-04-2024 12:05:53]: Without this playing with fantasy no creative work has ever yet come to birth. The debt we owe to the play of the imagination is incalculable. | by: Carl Jung
 [10-04-2024 12:05:27]: Fine words and an insinuating appearance are seldom associated with true virtue | by: Confucius
 [17-04-2024 12:05:31]: One of the most beautiful qualities of true friendship is to understand and to be understood. | by: Seneca the Younger
+[24-04-2024 12:06:13]: Look back over the past, with its changing empires that rose and fell, and you can foresee the future, too. | by: Marcus Aurelius
