@@ -8,3 +8,4 @@
 [10-04-2024 12:05:27]: Fine words and an insinuating appearance are seldom associated with true virtue | by: Confucius
 [17-04-2024 12:05:31]: One of the most beautiful qualities of true friendship is to understand and to be understood. | by: Seneca the Younger
 [24-04-2024 12:06:13]: Look back over the past, with its changing empires that rose and fell, and you can foresee the future, too. | by: Marcus Aurelius
+[01-05-2024 12:05:44]: Friendship with oneself is all important, because without it one cannot be friends with anyone else in the world. | by: Eleanor Roosevelt
