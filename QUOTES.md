@@ -12,3 +12,4 @@
 [08-05-2024 12:06:00]: When your desires are strong enough you will appear to possess superhuman powers to achieve. | by: Napoleon Hill
 [15-05-2024 12:05:38]: Nothing is at last sacred but the integrity of your own mind. | by: Ralph Waldo Emerson
 [22-05-2024 12:05:43]: A garden is always a series of losses set against a few triumphs, like life itself. | by: May Sarton
+[29-05-2024 12:06:30]: You are always free to change your mind and choose a different future, or a different past. | by: Richard Bach
