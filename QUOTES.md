@@ -15,3 +15,4 @@
 [29-05-2024 12:06:30]: You are always free to change your mind and choose a different future, or a different past. | by: Richard Bach
 [05-06-2024 12:05:42]: Successful people ask better questions, and as a result, they get better answers. | by: Tony Robbins
 [12-06-2024 12:05:38]: I think that we have a great opportunity to impart our wisdom and our knowledge and our experience to this younger generation. It may be different times, but experience transcends time, and wisdom transcends time. | by: Victoria Osteen
+[19-06-2024 12:05:43]: He who angers you conquers you. | by: Elizabeth Kenny
