@@ -18,3 +18,4 @@
 [19-06-2024 12:05:43]: He who angers you conquers you. | by: Elizabeth Kenny
 [26-06-2024 12:05:45]: Winners never quit and quitters never win. | by: Vince Lombardi
 [03-07-2024 12:05:44]: The only way to have a friend is to be one. | by: Ralph Waldo Emerson
+[10-07-2024 12:05:40]: The ballot is stronger than the bullet. | by: Abraham Lincoln
