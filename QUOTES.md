@@ -23,3 +23,4 @@
 [24-07-2024 12:05:39]: The sincere friends of this world are as ship lights in the stormiest of nights. | by: Giotto
 [31-07-2024 12:05:41]: If you focus on results, you will never change. If you focus on change, you will get results. | by: Jack Dixon
 [07-08-2024 12:05:41]: Where all think alike, no one thinks very much. | by: Walter Lippmann
+[14-08-2024 12:06:15]: If you find yourself in a hole, the first thing to do is stop digging. | by: Will Rogers
