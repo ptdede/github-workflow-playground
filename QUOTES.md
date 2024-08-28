@@ -25,3 +25,4 @@
 [07-08-2024 12:05:41]: Where all think alike, no one thinks very much. | by: Walter Lippmann
 [14-08-2024 12:06:15]: If you find yourself in a hole, the first thing to do is stop digging. | by: Will Rogers
 [21-08-2024 12:06:08]: He who learns must suffer. And even in our sleep pain that cannot forget falls drop by drop upon the heart, and in our own despair, against our will, comes wisdom to us by the awful grace of God. | by: Aeschylus
+[28-08-2024 12:05:52]: I have often regretted my speech, never my silence. | by: Publilius Syrus
